@@ -1,0 +1,57 @@
+<LobbyScreen>:
+    BoxLayout:
+        id: box
+        orientation: "horizontal"
+        spacing: 20
+        padding: 20
+
+<QuizScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        spacing: 10
+        padding: 20
+
+        # Separador / artista
+        Label:
+            id: lbl_artista
+            text: ""
+            font_size: 32
+            size_hint_y: 0.15
+            color: 1,1,1,1
+
+        # Pergunta
+        Label:
+            id: lbl_pergunta
+            text: ""
+            font_size: 24
+            size_hint_y: 0.15
+            color: 1,1,1,1
+
+        # Área dos botões de resposta
+        BoxLayout:
+            id: respostas_box
+            orientation: "vertical"
+            spacing: 10
+            size_hint_y: 0.5
+
+        # Timer e feedback
+        Label:
+            id: lbl_timer
+            text: ""
+            font_size: 18
+            size_hint_y: 0.05
+            color: 1,0,0,1
+
+        Label:
+            id: lbl_feedback
+            text: ""
+            font_size: 18
+            size_hint_y: 0.05
+            color: 0,1,0,1
+
+ScreenManager:
+    LobbyScreen:
+        name: "lobby"
+    QuizScreen:
+        name: "quiz"
+
